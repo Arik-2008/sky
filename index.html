@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aroma Coffee House</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-mug-hot"></i>
+            <span>Aroma House</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#home">Main Page</a>
+            <a href="#menu">Menu</a>
+            <a href="#location">Location</a>
+            <a href="#contact">Eddress</a>
+        </nav>
+        <div class="cart-icon-btn" onclick="toggleCart()">
+            <i class="fa-solid fa-shopping-bag"></i>
+            <span class="cart-badge" id="cart-count">0</span>
+        </div>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>လတ်ဆတ်မွှေးကြိုင်သော <br><span>ကော်ဖီစစ်စစ်</span> အရသာ</h1>
+            <p>နေ့ရက်တိုင်းအတွက် အကောင်းဆုံး ကော်ဖီစေ့များဖြင့် ဂရုတစိုက် ဖျော်စပ်ထားသော ကော်ဖီများကို ရယူခံစားလိုက်ပါ။</p>
+            <a href="#menu" class="btn">မီနူး ကြည့်ရန်</a>
+        </div>
+    </section>
+
+    <!-- Coffee Menu Section -->
+    <section id="menu" class="menu-section">
+        <h2 class="section-title">Menu</h2>
+        <div class="menu-grid">
+
+            <!-- Item 1 -->
+            <div class="card">
+                <img src="png-transparent-clear-glass-mug-with-cappuccino-coffee-milk-latte-tea-cappuccino-coffee-love-food-cafe-thumbnail.png" alt="Love Cappuccino Latte">
+                <h3>Love Cappuccino Latte</h3>
+                <div class="card-bottom">
+                    <span class="price">4,500 Ks</span>
+                    <button class="add-btn" onclick="addToCart('Love Cappuccino Latte', 4500, 'png-transparent-clear-glass-mug-with-cappuccino-coffee-milk-latte-tea-cappuccino-coffee-love-food-cafe-thumbnail.png')">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="card">
+                <img src="png-transparent-coffee-cup-cafe-cappuccino-espresso-cappuccino-thumbnail.png" alt="Art Latte Cappuccino">
+                <h3>Art Latte Cappuccino</h3>
+                <div class="card-bottom">
+                    <span class="price">4,000 Ks</span>
+                    <button class="add-btn" onclick="addToCart('Art Latte Cappuccino', 4000, 'png-transparent-coffee-cup-cafe-cappuccino-espresso-cappuccino-thumbnail.png')">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="card">
+                <img src="png-transparent-coffee-on-saucer-illustration-coffee-cup-cappuccino-cafe-flat-white-coffee-sketch-food-painted-hand-thumbnail.png" alt="Classic Sketch Espresso">
+                <h3>Classic Sketch Espresso</h3>
+                <div class="card-bottom">
+                    <span class="price">3,500 Ks</span>
+                    <button class="add-btn" onclick="addToCart('Classic Sketch Espresso', 3500, 'png-transparent-coffee-on-saucer-illustration-coffee-cup-cappuccino-cafe-flat-white-coffee-sketch-food-painted-hand-thumbnail.png')">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="card">
+                <img src="png-transparent-white-teacup-with-saucer-iced-coffee-kopi-luwak-cafe-tea-coffe-splash-food-coffee-saucer-thumbnail copy.png" alt="Strong Black Coffee">
+                <h3>Strong Black Coffee</h3>
+                <div class="card-bottom">
+                    <span class="price">3,000 Ks</span>
+                    <button class="add-btn" onclick="addToCart('Strong Black Coffee', 3000, 'png-transparent-white-teacup-with-saucer-iced-coffee-kopi-luwak-cafe-tea-coffe-splash-food-coffee-saucer-thumbnail copy.png')">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Location & Contact Section -->
+    <section id="location" class="location-section">
+        <h2 class="section-title">Place and Phone</h2>
+        <div class="location-container">
+            <div class="location-info">
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h4>Eddress</h4>
+                        <p>No.(308)၊ Phpyi Road ၊ Ka Mar Yout Towship ၊ Yangon</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <div>
+                        <h4>Open</h4>
+                        <p>Mon - Sun (6am-9pm)</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>09-782317218 / 09-781818766</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>@Aroma.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="map-box">
+                <!-- Google Maps -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.1084223292415!2d96.13009581486854!3d16.8209809884218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1ec2f0b9f2d15%3A0x6b8f804561fae4e5!2sPyay%20Rd%2C%20Yangon!5e0!3m2!1sen!2smm!4v1680000000000!5m2!1sen!2smm" 
+                    width="100%" 
+                    height="300" 
+                    style="border:0; border-radius: 12px;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Overlay & Sidebar -->
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Shop Basket</h3>
+            <i class="fa-solid fa-xmark close-btn" onclick="toggleCart()"></i>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Items added dynamically -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cart-total-price">0 Ks</span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Order</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p> 2026 Aroma Coffee House. All rights reserved.</p>
+    </footer>   
+</body>
+</html>
